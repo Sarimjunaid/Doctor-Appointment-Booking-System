@@ -1,0 +1,114 @@
+
+@tailwind utilities;
+
+@layer base{
+  section{
+    @apply py-[35px]
+  }
+}
+
+@layer components{
+  .container{
+    @apply max-w-full mx-auto  w-[1440px] 
+  }
+  .btn{
+    @apply bg-[#0067FF] py-[10px] px-[15px] rounded-[50px]  font-[600] mt-[22px] text-[white];
+  }
+  .heading{
+    @apply text-[44px] leading-[54px] font-[700] text-[#181A1E]
+  }
+  .text__para{
+    @apply text-[18px] leading-[30px] font-[400] text-[4E545F] mt-[18px]
+  }
+  .header{
+    @apply bg-[url('./assets/images/mask.png')] bg-no-repeat bg-center bg-cover w-full h-[100px] leading-[100px] ;
+  }
+  .hero__section{
+    @apply bg-[url('./assets/images/hero-bg.png')] bg-no-repeat bg-center bg-cover;
+  }
+  .form__label {
+    @apply text-[#4E545F]  text-[16px]  ;
+  }
+  .form__input {
+    @apply w-full  border border-solid border-[#0066ff61] focus:outline-none focus:border-[#0067FF] text-[16px] text-[#181A1E] placeholder:text-[#4E545F] cursor-pointer
+  }
+}
+@media only screen and (max-width:1024px) {
+  .container{
+    @apply w-full;
+  }
+  .section{
+    @apply py-[35px];
+  }
+  .flex__row{
+    @apply flex-row ;
+  }
+  .flex_col{
+    @apply flex-col ;
+  }
+  ._grid_{
+    @apply grid-cols-2 ;
+  }
+  .p_b{
+    @apply pb-[3px];
+  }
+  ._w_f{
+    @apply w-full;
+  }
+  .m--l{
+    @apply ml-[-25px];
+  }
+  .m-r{
+    @apply mr-[55px];
+  }
+  ._m-r{
+    @apply mr-[152px];
+  }
+  .hid{
+    @apply hidden;
+  }
+}
+@media only screen and (max-width:768px){
+  .heading{
+    @apply text-[26px] leading-[36px];
+  }
+  .text__para{
+    @apply text-[16px]  mt-[3];
+  }
+  .flex__col{
+    @apply flex-col ;
+  }
+  .m_l{
+    @apply ml-[15px];
+  }
+  .m_l_{
+    @apply mr-[55px];
+  }
+  
+  ._m_l{
+    @apply ml-[140px] ;
+  }
+  .-m_l{
+    @apply ml-[75px] ;
+  }
+  .m_r{
+    @apply mr-[30px];
+  }
+  .b_{
+    bottom: 4px;
+  }
+  .grid_{
+    @apply grid-cols-1 ;
+  }
+  ._p_b{
+    @apply pb-[3px];
+  }
+  .w_f{
+    @apply w-full;
+  }
+  .end{
+    @apply justify-between items-end;
+  }.-flex-row{
+    @apply flex-row ;
+  }
+}
