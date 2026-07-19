@@ -1,0 +1,31 @@
+name: deploy to ec2
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ubuntu
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd ~/Doctor-Appointment-Booking-System
+            git pull origin main
+            cd backend
+            npm install
+            
+            # RECOMMENDED: If you have PM2 installed on EC2, uncomment the line below and delete the nohup line:
+            # pm2 restart medicare-booking || pm2 start index.js --name medicare-booking
+            
+            # IF USING NOHUP: You must redirect input/output and disown it so the GitHub Action doesn't hang or kill it.
+            nohup npm start > server.log 2>&1 < /dev/null & 
+            disown
