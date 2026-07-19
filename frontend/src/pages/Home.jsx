@@ -26,7 +26,7 @@ const Home = () => {
             <div>
               <div className='lg:w-[570px] m_l'>
                 <h1 className='text-[36px] leading-[46px] text-[#181A1E] font-[800] md:text-[60px] md:leading-[60px] '>
-                  We help patient <br /> live a healthy, <br /> longer life.
+                  We help patients <br /> live a healthy, <br /> longer life.
                 </h1>
                 <p className='text__para text-xl'>We help patients navigate the complex, often overwhelming landscape of modern healthcare by providing compassionate, patient-centered guidance, cutting-edge medical insights, and unwavering support at every single step of their unique recovery journey.</p>
                 <Link to='/doctors' className='btn text-white inline-flex items-center justify-center'>Request an Appointment</Link>                
